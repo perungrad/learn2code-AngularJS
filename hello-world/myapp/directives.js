@@ -7,10 +7,11 @@ angular.module('myapp')
     restrict: 'EA',
     templateUrl: 'myapp/templates/tagsSelector.html',
     scope: {
-      model: '=tagsSelector'
+      model: '=tagsSelector',
+      taglist: '='
     },
     link: function(scope, el, attrs) {
-      scope.tags = ['home', 'work', 'wife', 'urgent'];
+      scope.tags = scope.taglist;
 
       scope.isTagSelected = function(tag) {
         return _.include(scope.model, tag);

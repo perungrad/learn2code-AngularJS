@@ -5,6 +5,7 @@ angular.module('myapp')
 
   $scope.data = {
     filterByDone: false,
+    availableTags: ['home', 'work', 'wife', 'urgent'],
     selectedTags: [],
     tasks: [
       {"text":"Buy beer","done":false,"tags":["home","urgent"]},
@@ -13,11 +14,12 @@ angular.module('myapp')
   };
 
   this.saveNewTask = function() {
-    $scope.data.tasks.unshift({
+    $scope.data.tasks.push({
       text: $scope.data.text,
       done: true,
-      tags: [],
+      tags: $scope.data.newTaskTags,
     });
+    $scope.data.newTaskTags = [];
   };
 
   this.getDoneCount = function() {
