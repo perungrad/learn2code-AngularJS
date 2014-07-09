@@ -40,4 +40,13 @@ angular.module('myapp')
 
     return true;
   }
+
+  this.filterByTags = function(task) {
+    if ($scope.data.selectedTags.length) {
+      var matchedTags = _.intersection($scope.data.selectedTags, task.tags);
+      return !!matchedTags.length;
+    }
+
+    return true;
+  }
 });

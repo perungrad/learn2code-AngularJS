@@ -27,7 +27,7 @@
     <div ng-controller="TaskController as ctrl" class="row">
       <div class="col-sm-6">
         <ul>
-          <li ng-repeat="task in data.tasks | filter:ctrl.filterByDone">
+          <li ng-repeat="task in data.tasks | filter:ctrl.filterByDone | filter:ctrl.filterByTags">
             <strong>{{task.text}}</strong>
             <span   ng-repeat="tag in task.tags"
                     class="">{{tag}}{{($last) ? '' : ', '}}</span>
