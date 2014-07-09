@@ -4,7 +4,7 @@ angular.module('myapp')
   'use strict';
 
   $scope.data = {
-    onlyDone: false,
+    filterByDone: false,
     selectedTags: [],
     tasks: [
       {"text":"Buy beer","done":false,"tags":["home","urgent"]},
@@ -28,5 +28,13 @@ angular.module('myapp')
         return memo
       }
     }, 0);
+  }
+
+  this.filterByDone = function(task) {
+    if ($scope.data.filterByDone) {
+      return task.done;
+    }
+
+    return true;
   }
 });

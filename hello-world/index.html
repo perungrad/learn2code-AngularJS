@@ -27,14 +27,10 @@
     <div ng-controller="TaskController as ctrl" class="row">
       <div class="col-sm-6">
         <ul>
-          <li ng-repeat="task in data.tasks">
+          <li ng-repeat="task in data.tasks | filter:ctrl.filterByDone">
             <strong>{{task.text}}</strong>
-
             <span   ng-repeat="tag in task.tags"
                     class="">{{tag}}{{($last) ? '' : ', '}}</span>
-
-
-
             <input ng-model="task.done" type="checkbox">
           </li>
         </ul>
@@ -44,10 +40,9 @@
         <h3>Done count {{ctrl.getDoneCount()}}</h3>
         <div class="checkbox">
           <label>
-            <input ng-model="data.onlyDone" type="checkbox"> Only done
+            <input ng-model="data.filterByDone" type="checkbox"> Only done
           </label>
         </div>
-
         <div tags-selector="data.selectedTags"></div>
       </div>
 
