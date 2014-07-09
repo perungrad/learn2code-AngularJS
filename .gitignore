@@ -22,5 +22,6 @@ nbproject
 ## Folders to ignore
 node_modules
 vendor
+build
 
 ## Files to ignore
