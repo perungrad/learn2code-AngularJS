@@ -12,12 +12,13 @@
 </head>
 <body>
   <div class="container">
-
-    <input ng-model="greeting" class="form-control" autofocus>
-    <h2>Hello {{greeting}}</h2>
-
+    <div ng-controller="UserController">
+      <input ng-model="greeting" class="form-control" autofocus>
+      <h2>Hello {{greeting}}</h2>
+    </div>
   </div>
 
   <script src="//code.angularjs.org/1.3.0-beta.14/angular.min.js"></script>
+  <script src="myapp/controllers.js"></script>
 </body>
 </html>
