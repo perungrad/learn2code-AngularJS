@@ -16,9 +16,10 @@ angular.module('myapp')
   this.saveNewTask = function() {
     $scope.data.tasks.push({
       text: $scope.data.text,
-      done: true,
+      done: false,
       tags: $scope.data.newTaskTags,
     });
+    $scope.data.text = '';
     $scope.data.newTaskTags = [];
   };
 
