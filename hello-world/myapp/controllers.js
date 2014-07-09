@@ -4,6 +4,7 @@ angular.module('myapp')
   'use strict';
 
   $scope.data = {
+    onlyDone: false,
     selectedTags: [],
     tasks: [
       {"text":"Buy beer","done":false,"tags":["home","urgent"]},
@@ -13,7 +14,7 @@ angular.module('myapp')
 
   this.saveNewTask = function() {
     $scope.data.tasks.unshift({
-      text: $scope.text,
+      text: $scope.data.text,
       done: true,
       tags: [],
     });

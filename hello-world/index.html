@@ -41,12 +41,18 @@
       </div>
 
       <div class="col-sm-6">
-        <h3>{{ctrl.getDoneCount()}}</h3>
+        <h3>Done count {{ctrl.getDoneCount()}}</h3>
+        <div class="checkbox">
+          <label>
+            <input ng-model="data.onlyDone" type="checkbox"> Only done
+          </label>
+        </div>
+
         <div tags-selector="data.selectedTags"></div>
       </div>
 
       <form ng-submit="ctrl.saveNewTask()" class="well">
-        <input ng-model="text" class="form-control" required autofocus>
+        <input ng-model="data.text" class="form-control" required autofocus>
         <button type="submit">add task</button>
       </form>
     </div>
