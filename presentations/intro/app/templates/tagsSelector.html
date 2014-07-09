@@ -1,0 +1,8 @@
+<ul class="tags-selector">
+  <li>
+    <a ng-click="selectTag(null)" ng-class="{active:!model.length}">all</a>
+  </li>
+  <li ng-repeat="tag in tags">
+    <a ng-click="selectTag(tag)" ng-class="{active:isTagSelected(tag)}">{{tag}}</a>
+  </li>
+</ul>

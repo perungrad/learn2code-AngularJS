@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Intro • AngularJS</title>
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<article>
+  <section>
+    <div class="content">
+      <img src="img/logo_learn2code.png">
+      <img src="img/logo_angularjs.png">
+      <div class="byline">
+        <div class="classy">Igor Hlina (<a href="http://www.srigi.sk">@srigi</a>)</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Igor Hlina</h2>
+      <a href="https://twitter.com/srigi"><img src="img/srigi.png"></a>
+      <h3>srigi</h3>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/jpw_01.png">
+      <img src="img/jpw_02.png">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h4 style="margin-bottom:0">Neonus</h4>
+      <img src="img/neonus.png" style="margin-top:0">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h4>Websupport</h4>
+      <img src="img/websupport.jpg" style="margin-top:0">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/webletak.png">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h4 style="margin-bottom:0">Seges</h4>
+      <img src="img/solved.png" style="margin-top:0">
+    </div>
+  </section>
+
+  <section data-slidetype="video">
+    <div class="content">
+      <video src="video/solved-upload.mp4" loop>
+    </div>
+  </section>
+
+  <section data-slidetype="video">
+    <div class="content">
+      <video src="video/solved-crop.mp4" loop>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <a href="https://www.youtube.com/watch?v=Z_Mkon0u1jM"><img src="img/srigi-angularjs-YT.jpg"></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/logo_angularjs-big.png">
+      <ul class="bullet">
+        <li class="bullet">learn AngularJS</li>
+        <li class="bullet">learn to build complex webapps</li>
+        <li class="bullet">understand/implement dev-stack</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <a class="bullet pull-left" href="https://twitter.com/mhevery"><img src="img/misko.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/IgorMinar"><img src="img/igor.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/vojtajina"><img src="img/vojta.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/briantford"><img src="img/brian.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/yearofmoo"><img src="img/mathias.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/SomeJulie"><img src="img/julie.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/bradlygreen"><img src="img/bradly.jpg"></a>
+      <a class="bullet pull-left" href="https://twitter.com/gsklee"><img src="img/gsklee.jpg"></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/misko-talks1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/misko-talks2.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/misko-talks3.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <a href="https://www.youtube.com/watch?v=0iQCLlu1dko"><img src="img/misko-talks4.jpg"></a>
+    </div>
+  </section>
+
+
+  <!-- Meta infozz -->
+  <section>
+    <div class="content">
+      <h1>Meta infozz</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Requirements - on you</h2>
+
+      <ul class="bullet">
+        <li class="bullet">HTTP</li>
+        <li class="bullet">HTML</li>
+        <li class="bullet">Javascript + JSON</li>
+        <li class="bullet">jQuery</li>
+        <li class="bullet">Git</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Requirements - on your machine</h2>
+
+      <ul class="bullet">
+        <li class="bullet">Good editor (I recommend Sublime Text 3)</li>
+        <li class="bullet">Chrome browser</li>
+        <li class="bullet">GIT</li>
+        <li class="bullet">Node.js</li>
+        <li class="bullet">Apache webserver (only day #1)</li>
+        <li class="bullet">Ruby runtime (for SASS &amp; Compass)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Chrome extensions</h2>
+
+      <ul>
+        <li><a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en-US">AngularJS Batarang</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en-US">JSONView</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en-US">LiveReload</a></li>
+        <li><a href="http://yslow.org/faq/">YSlow</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2 class="bullet">Flow</h2>
+      <img class="bullet" src="img/github1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/github2.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/localhost-l2c_clone1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/localhost-l2c_clone2.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/programming.gif">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/localhost-l2c_clone3.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/localhost-l2c_clone4.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <h2>Flow</h2>
+      <img src="img/localhost-l2c_clone5.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/app.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/mobile-trend1.jpg" style="margin:0 auto">
+      <img src="img/mobile-trend2.jpg" style="margin:0 auto">
+    </div>
+  </section>
+
+
+  <!-- SPA -->
+  <section>
+    <div class="content nofade">
+      <h1>Single page application</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/spa-vs-mvc01.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc02.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc03.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc04.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc05.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc06.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc07.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc08.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc09.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc10.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc11.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/spa-vs-mvc12.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>SPA advantages</h2>
+      <ul>
+        <li>Sending JSON is cheaper (backend advantage)</li>
+        <li>No page flicker</li>
+        <li>Faster UI, more interactive</li>
+        <li>UI is just another client</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>SPA disadvantages</h2>
+      <ul>
+        <li>Client must have JavaScript enabled</li>
+        <li>Can take very long to load</li>
+        <li>Sudden reload can take you back to the start of the site</li>
+        <li>Search bots can't index site</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- AngularJS -->
+  <section>
+    <div class="content">
+      <h1>Learning AngularJS</h1>
+      <ul>
+        <li>Data binding</li>
+        <li>Controllers, scope</li>
+        <li>DI</li>
+        <li>Directives</li>
+        <li>Services, REST</li>
+        <li>Testing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section data-section-name="Databinding">
+    <div class="content">
+      <h2>Databinding</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+        &lt;input ng-model="username"&gt;
+        &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="2"><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+        &lt;input ng-model="username"&gt;
+        &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="helloWorld">
+    <div class="content nofade">
+      <pre data-line="2"><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+        &lt;input ng-model="username"&gt;
+        &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+      <app>
+        greet to <input ng-model="username" type="text">
+        <p>Hello <span class="result">{{username}}</span></p>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Let's get working</h2>
+      <pre class="bigger bullet">git clone https://github.com/srigi/learn2code-AngularJS.git</pre>
+      <pre class="bigger bullet">python -m SimpleHTTPServer</pre>
+    </div>
+  </section>
+
+  <section data-section-name="Controllers">
+    <div class="content">
+      <h2>Controllers, Modules, $scope</h2>
+      <h4>and eventloop</h4>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+
+          &lt;input ng-model="username"&gt;
+          &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="5,8"><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+        &lt;div ng-controller="UserController"&gt;
+          &lt;input ng-model="username"&gt;
+          &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="11"><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app&gt;
+      ...
+      &lt;body&gt;
+        &lt;div ng-controller="UserController"&gt;
+          &lt;input ng-model="username"&gt;
+          &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+        &lt;script src="myapp/controllers.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="2,11"><code class="language-markup">    &lt;!doctype html&gt;
+    &lt;html ng-app="myapp"&gt;
+      ...
+      &lt;body&gt;
+        &lt;div ng-controller="UserController"&gt;
+          &lt;input ng-model="username"&gt;
+          &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;script src="js/angular.js"&gt;&lt;/script&gt;
+        &lt;script src="myapp/main.js"&gt;&lt;/script&gt;
+        &lt;script src="myapp/controllers.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <span class="file">myapp/main.js</span>
+      <pre><code class="language-javascript">    module = angular.module('myapp', []);
+      </code></pre>
+      <img class="invisible" src="img/module1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <span class="file">myapp/main.js</span>
+      <pre><code class="language-javascript">    module = angular.module('myapp', []);
+    console.log(module);</code></pre>
+      <img src="img/module1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/module2.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <span class="file">myapp/main.js</span>
+      <pre><code class="language-javascript">    module = angular.module('myapp', []);</code></pre>
+      <span class="file">myapp/controllers.js</span>
+      <pre><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      // somecode
+
+    });</code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controller1">
+    <div class="content nofade">
+      <span class="file">myapp/main.js</span>
+      <pre><code class="language-javascript">    module = angular.module('myapp', []);</code></pre>
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="3"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      'use strict';
+      $scope.username = 'Jozko Mrkvička';
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController">
+          greet to <input ng-model="username" type="text">
+          <p>Hello <span class="result">{{username}}</span></p>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="6-8"><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      'use strict';
+      $scope.username = "Jožko Mrkvička";
+
+      $timeout(function() {
+        $scope.username = "Ferko Reďkovka";
+      }, 5000);
+    });</code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controller2">
+    <div class="content nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="6-8"><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      'use strict';
+      $scope.username = "Jožko Mrkvička";
+
+      $timeout(function() {
+        $scope.username = "Ferko Reďkovka";
+      }, 5000);
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController">
+          greet to <input ng-model="username" type="text">
+          <p>Hello <span class="result">{{username}}</span></p>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section data-section-name="eventloop">
+    <div class="content">
+      <pre><code class="language-javascript">    setTimeout(function() {
+      console.log('foo');
+    }, 2000);
+
+    console.log('bar');
+
+    setTimeout(function() {
+      console.log('baz');
+    });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev01.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev02.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev03.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev04.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev05.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev06.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev07.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev08.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev09.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev10.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <img src="img/ev11.jpg">
+    </div>
+  </section>
+
+  <section data-section-name="controller methods">
+    <div class="content nofade">
+      <pre data-line="4,5"><code class="language-markup">    &lt;div ng-controller="UserController"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;button ng-click="setUsername()"&gt;set username&lt;/button&gt;
+      &lt;button ng-click="setUsername('Marienka')"&gt;set username&lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+      <pre class="invisible"><code class="language-javascript">
+
+
+
+
+
+      </code></pre>
+      <div class="app-placeholder rows3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="1,4,5"><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;button ng-click="ctrl.setUsername()"&gt;set username&lt;/button&gt;
+      &lt;button ng-click="ctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+      <pre class="invisible"><code class="language-javascript">
+
+
+
+
+
+      </code></pre>
+      <div class="app-placeholder rows3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;button ng-click="ctrl.setUsername()"&gt;set username&lt;/button&gt;
+      &lt;button ng-click="ctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="4-6"><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      ...
+      this.setUsername = function(username) {
+        $scope.username = username || 'srigi';
+      };
+    });</code></pre>
+      <div class="app-placeholder rows3"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controllerMethods">
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;button ng-click="ctrl.setUsername()"&gt;set username&lt;/button&gt;
+      &lt;button ng-click="ctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      ...
+      this.setUsername = function(username) {
+        $scope.username = username || 'srigi';
+      };
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController as ctrl">
+          greet to <input ng-model="username" type="text"><br>
+          <p>Hello <span class="result">{{username}}</span></p>
+          <button ng-click="ctrl.setUsername()">setUsername()</button>
+          <button ng-click="ctrl.setUsername('Marienka')">setUsername('Marienka')</button>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre data-line="2"><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username" ng-change="ctrl.newUsername()"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+      <pre class="invisible"><code class="language-javascript">
+
+
+
+
+
+      </code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username" ng-change="ctrl.newUsername()"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="4-6"><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      ...
+      this.newUsername = function() {
+        console.log($scope.username);
+      };
+    });</code></pre>
+      <div class="app-placeholder rows2"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controllerNgChange">
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username" ng-change="ctrl.newUsername()"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      ...
+      this.newUsername = function() {
+        console.log($scope.username);
+      };
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController as ctrl">
+          greet to <input ng-model="username" type="text" ng-change="ctrl.newUsername(username)"><br>
+          <p>Hello <span class="result">{{username}}</span></p>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controllerNgWatch">
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as ctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="4-6"><code class="language-javascript">    angular.module('myapp')
+    .controller('UserController', function($scope, $timeout) {
+      ...
+      $scope.$watch('username', function() {
+        console.log($scope.username);
+      });
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController as ctrl">
+          greet to <input ng-model="username" type="text"><br>
+          <p>Hello <span class="result">{{username}}</span></p>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long">
+      <pre data-line="4,7"><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre class="invisible"><code class="language-javascript">
+
+
+
+
+
+      </code></pre>
+      <div class="app-placeholder rows3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="4-7"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.username = 'Jožko Mrkvička';
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+      <div class="app-placeholder rows3"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controllerNested">
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.username = 'Jožko Mrkvička';
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController as uctrl">
+          greet to <input ng-model="username" type="text"><br>
+          <p>Hello <span class="result">{{username}}</span></p>
+          <div ng-controller="ButtonsController as bctrl">
+            <button ng-click="bctrl.getUsername()">getUsername()</button>
+            <button ng-click="bctrl.setUsername('Marienka')">setUsername('Marienka')</button>
+          </div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.username = 'Jožko Mrkvička';
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+    <img src="img/scopes1.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="2"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.username = 'Jožko Mrkvička';
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+    <img src="img/scopes2.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="6"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.username = 'Jožko Mrkvička';
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+    <img src="img/scopes3.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="username"&gt;
+      &lt;p&gt;Hello &#123;&#123;username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="2"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.data = {username: 'Jožko Mrkvička'};
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+    <img src="img/scopes4.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre data-line="2,3"><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="data.username"&gt;
+      &lt;p&gt;Hello &#123;&#123;data.username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.data = {username: 'Jožko Mrkvička'};
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.username) };
+      this.setUsername = function(username) { $scope.username = username };
+    });</code></pre>
+    <img src="img/scopes4.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="data.username"&gt;
+      &lt;p&gt;Hello &#123;&#123;data.username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="5,6"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.data = {username: 'Jožko Mrkvička'};
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.data.username) };
+      this.setUsername = function(username) { $scope.data.username = username };
+    });</code></pre>
+    <img src="img/scopes4.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="data.username"&gt;
+      &lt;p&gt;Hello &#123;&#123;data.username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre data-line="5,6"><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.data = {username: 'Jožko Mrkvička'};
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.data.username) };
+      this.setUsername = function(username) { $scope.data.username = username };
+    });</code></pre>
+    <img src="img/scopes5.jpg">
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="controllerNestedFixed">
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="UserController as uctrl"&gt;
+      &lt;input ng-model="data.username"&gt;
+      &lt;p&gt;Hello &#123;&#123;data.username&#125;&#125;&lt;/p&gt;
+      &lt;div ng-controller="ButtonsController as bctrl"&gt;
+        &lt;button ng-click="bctrl.getUsername()"&gt;get username&lt;/button&gt;
+        &lt;button ng-click="bctrl.setUsername('Marienka')"&gt;set username&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">    angular.module('myapp').controller('UserController', function($scope) {
+      $scope.data = {username: 'Jožko Mrkvička'};
+    })
+    .controller('ButtonsController', function($scope) {
+      this.getUsername = function() { console.log($scope.data.username) };
+      this.setUsername = function(username) { $scope.data.username = username };
+    });</code></pre>
+      <app>
+        <div ng-controller="UserController as uctrl">
+          greet to <input ng-model="data.username" type="text"><br>
+          <p>Hello <span class="result">{{data.username}}</span></p>
+          <div ng-controller="ButtonsController as bctrl">
+            <button ng-click="bctrl.getUsername()">getUsername()</button>
+            <button ng-click="bctrl.setUsername('Marienka')">setUsername('Marienka')</button>
+          </div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <img src="img/glue.png">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Summary of this section</h2>
+      <img class="pull-left bullet" src="img/recap-spa.jpg">
+      <img class="pull-left bullet" src="img/recap-helloworld.jpg">
+      <img class="pull-left bullet" src="img/recap-modules.jpg">
+      <img class="pull-left bullet" src="img/recap-ev.jpg">
+      <img class="pull-left bullet" src="img/recap-methods.jpg">
+      <img class="pull-left bullet" src="img/recap-scopes.jpg">
+    </div>
+  </section>
+
+  <section data-section-name="controller methods">
+    <div class="content">
+      <h2>DI</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp')
+  .controller('UserController', function($scope, $timeout) {
+    $timeout(function() {
+      $scope.username = 'Ferko Reďkovka';
+    }, 5000);
+  });</code></pre>
+      <div class="invisible">
+        <span class="file">myapp/controllers.min.js</span>
+        <pre><code class="language-javascript">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="2"><code class="language-javascript">  angular.module('myapp')
+  .controller('UserController', function($scope, $timeout) {
+    $timeout(function() {
+      $scope.username = 'Ferko Reďkovka';
+    }, 5000);
+  });</code></pre>
+      <div class="invisible">
+        <span class="file">myapp/controllers.min.js</span>
+        <pre><code class="language-javascript">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="2"><code class="language-javascript">  angular.module('myapp')
+  .controller('UserController', function($timeout, $scope) {
+    $timeout(function() {
+      $scope.username = 'Ferko Reďkovka';
+    }, 5000);
+  });</code></pre>
+      <div class="invisible">
+        <span class="file">myapp/controllers.min.js</span>
+        <pre><code class="language-javascript">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="2"><code class="language-javascript">  angular.module('myapp')
+  .controller('UserController', function($timeout, $scope) {
+    $timeout(function() {
+      $scope.username = 'Ferko Reďkovka';
+    }, 5000);
+  });</code></pre>
+      <div>
+        <span class="file">myapp/controllers.min.js</span>
+        <pre><code class="language-javascript">angular.module("myapp").controller("UserController",function(a,b){a(function(){b.username="Ferko Reďkovka"},5000)});</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <span class="file">myapp/controllers.js</span>
+      <pre data-line="2"><code class="language-javascript">  angular.module('myapp')
+  .controller('UserController', ['$timeout', '$scope', function($timeout, $scope) {
+    $timeout(function() {
+      $scope.username = 'Ferko Reďkovka';
+    }, 5000);
+  }]);</code></pre>
+      <div>
+        <span class="file">myapp/controllers.min.js</span>
+        <pre><code class="language-javascript">angular.module("myapp").controller("UserController",["$timeout","$scope",function(a,b){a(function(){b.username="Ferko Reďkovka"},5000)}]);</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section data-section-name="directives">
+    <div class="content">
+      <h2>Directives</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <span class="file">myapp/controllers.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp')
+  .controller('IndexController', function($scope) {
+    'use strict';
+    $scope.data = {
+      clickCounter: 0
+    };
+  });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    'use strict';
+    // some code
+
+  });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre data-line="2-4"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return function(scope, el, attrs) {
+      console.log(scope, el, attrs);
+    };
+  });</code></pre>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directive1">
+    <div class="content nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return function(scope, el, attrs) {
+      console.log(scope, el, attrs);
+    };
+  });</code></pre>
+      <app style="display:none">
+        <div ng-controller="IndexController as ctrl">
+          <div click-counter></div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter&gt;&lt;/div&gt; &lt;div click-counter&gt;&lt;/div&gt; &lt;div click-counter&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return function(scope, el, attrs) {
+      console.log(scope, el, attrs);
+    };
+  });</code></pre>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directive1">
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter&gt;&lt;/div&gt; &lt;div click-counter&gt;&lt;/div&gt; &lt;div click-counter&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return function(scope, el, attrs) {
+      console.log(scope, el, attrs);
+    };
+  });</code></pre>
+      <app style="display:none">
+        <div ng-controller="IndexController as ctrl">
+          <div click-counter></div>
+          <div click-counter></div>
+          <div click-counter></div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;click-counter&gt;&lt;/click-counter&gt; &lt;click-counter&gt;&lt;/click-counter&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.clickCounter}}',
+      link: function(scope, el, attrs) {
+        scope.count = function() {
+          scope.data.clickCounter += 1;
+        }
+      }
+    };
+  });</code></pre>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directive2">
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;click-counter&gt;&lt;/click-counter&gt; &lt;click-counter&gt;&lt;/click-counter&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.clickCounter}}',
+      link: function(scope, el, attrs) {
+        scope.count = function() {
+          scope.data.clickCounter += 1;
+          ...</code></pre>
+      <app>
+        <div ng-controller="IndexController as ctrl">
+          <div click-counter class="pull-left"></div>
+          <div click-counter class="pull-left"></div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long">
+      <pre data-line="8"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.counterValue}}',
+
+
+      link: function(scope, el, attrs) {
+        scope.data = {conterValue: 0};
+        scope.count = function() {
+          scope.data.conterValue += 1;
+        }
+      }
+    });</code></pre>
+      <div class="app-placeholder rows1"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre data-line="5"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.conterValue}}',
+      scope: {},
+
+      link: function(scope, el, attrs) {
+        scope.data = {conterValue: 0};
+        scope.count = function() {
+          scope.data.conterValue += 1;
+        }
+      }
+    });</code></pre>
+      <div class="app-placeholder rows1"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directive3">
+    <div class="content long nofade">
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.clickCounter}}',
+      scope: {},
+
+      link: function(scope, el, attrs) {
+        scope.data = {clickCounter: 0};
+        scope.count = function() {
+          scope.data.clickCounter += 1;
+        }
+      }
+    });</code></pre>
+      <app>
+        <div ng-controller="IndexController as ctrl">
+          <div click-counter class="pull-left"></div>
+          <div click-counter class="pull-left"></div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-javascript">  angular.module('myapp')
+  .controller('IndexController', function($scope) {
+    $scope.data = {
+      initCounter1: 15,
+      initCounter2: 23
+    };
+  });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter="data.initCounter1"&gt;&lt;/div&gt;
+      &lt;div click-counter="data.initCounter2"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre data-line="6"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.counterValue}}',
+      scope: {
+        initValue: '=clickCounter'
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: 0};
+        ...
+      }
+    });</code></pre>
+      <div class="app-placeholder rows1"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter="data.initCounter1"&gt;&lt;/div&gt;
+      &lt;div click-counter="data.initCounter2"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre data-line="10"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.counterValue}}',
+      scope: {
+        initValue: '=clickCounter'
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: scope.initValue};
+        ...
+      }
+    });</code></pre>
+      <div class="app-placeholder rows1"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter init-value="data.initCounter1"&gt;&lt;/div&gt;
+      &lt;div click-counter init-value="data.initCounter2"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+    return {
+      restrict: 'EA',
+      template: '&lt;button ng-click="count()"&gt;count&lt;/button&gt; {{data.counterValue}}',
+      scope: {
+        initValue: '='
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: scope.initValue};
+        ...
+      }
+    });</code></pre>
+      <div class="app-placeholder rows1"></div>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directive4IsolatedPassing">
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter="data.initCounter1"&gt;&lt;/div&gt;
+      &lt;div click-counter="data.initCounter2"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+      ...
+      scope: {
+        initValue: '=clickCounter'
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: scope.initValue};
+        ...</code></pre>
+      <app>
+        <div ng-controller="IndexController as ctrl">
+          <div click-counter="data.initCounter1" class="pull-left"></div>
+          <div click-counter="data.initCounter2" class="pull-left"></div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long">
+      <pre data-line="2,3"><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter="{{data.initCounter1}}"&gt;&lt;/div&gt;
+      &lt;div click-counter="{{data.initCounter2}}"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+      ...
+      scope: {
+        initValue: '=clickCounter'
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: scope.initValue};
+        ...</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">    &lt;div ng-controller="IndexController as ctrl"&gt;
+      &lt;div click-counter="{{data.initCounter1}}"&gt;&lt;/div&gt;
+      &lt;div click-counter="{{data.initCounter2}}"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+      <span class="file">myapp/directives.js</span>
+
+      <pre data-line="4"><code class="language-javascript">  angular.module('myapp').directive('clickCounter', function() {
+      ...
+      scope: {
+        initValue: '@clickCounter'
+      },
+
+      link: function(scope, el, attrs) {
+        scope.data = {counterValue: scope.initValue};
+        ...</code></pre>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directiveTags">
+    <div class="content">
+      <pre class="invisible"><code class="language-markup">
+      </code></pre>
+      <app>
+        <div ng-controller="IndexController as ctrl">
+          <div tags-selector="data.selectedTags"></div>
+          <div class="tags-selector-model">{{data.selectedTags}}</div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-javascript">  angular.module('myapp').controller('IndexController', function($scope) {
+    $scope.data = {
+      selectedTags: []
+    };
+  });</code></pre>
+      <pre><code class="language-markup">  &lt;div ng-controller="IndexController as ctrl"&gt;
+    &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;
+    &lt;div class="result"&gt;{{data.selectedTags}}&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">  &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('tagsSelector', function() {
+      return {
+        restrict: 'EA',
+        templateUrl: 'myapp/templates/tagsSelector.html',
+        scope: {
+          model: '=tagsSelector'
+        },
+        link: function(scope, el, attrs) {
+          scope.tags = ['home', 'work', 'wife', 'urgent'];
+          scope.isTagSelected = function(tag) {
+            ...
+          };
+          scope.selectTag = function(tag) {
+            ...
+          };
+        }
+      };
+    });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">  &lt;ul class="tags-selector"&gt;
+    &lt;li&gt;
+      &lt;a ng-click="selectTag(null)" ng-class="{active:!model.length}"&gt;all&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li ng-repeat="tag in tags"&gt;
+      &lt;a ng-click="selectTag(tag)" ng-class="{active:isTagSelected(tag)}"&gt;{{tag}}&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('tagsSelector', function() {
+        ...
+        scope.tags = ['home', 'work', 'wife', 'urgent'];
+        scope.isTagSelected = function(tag) {
+          return _.include(scope.model, tag);
+        };
+        ...</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content long nofade">
+      <pre><code class="language-markup">  &lt;ul class="tags-selector"&gt;
+    &lt;li&gt;
+      &lt;a ng-click="selectTag(null)" ng-class="{active:!model.length}"&gt;all&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li ng-repeat="tag in tags"&gt;
+      &lt;a ng-click="selectTag(tag)" ng-class="{active:isTagSelected(tag)}"&gt;{{tag}}&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+      <pre><code class="language-javascript">  angular.module('myapp').directive('tagsSelector', function() {
+        ...
+        scope.tags = ['home', 'work', 'wife', 'urgent'];
+        scope.selectTag = function(tag) {
+          var idx;
+          if (tag) {
+            idx = scope.model.indexOf(tag);
+            if (idx === -1) {
+              scope.model.push(tag);
+            } else {
+              scope.model.splice(idx, 1);
+            }
+          } else {
+            scope.model = [];
+          }
+        };
+        ...</code></pre>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="directiveTags">
+    <div class="content nofade">
+      <pre class="invisible"><code class="language-markup">
+      </code></pre>
+      <app>
+        <div ng-controller="IndexController as ctrl">
+          <div tags-selector="data.selectedTags"></div>
+          <div class="tags-selector-model">{{data.selectedTags}}</div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section data-section-name="services">
+    <div class="content">
+      <h2>services, REST</h2>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="service1">
+    <div class="content nofade">
+      <pre class="invisible"><code class="language-markup">
+      </code></pre>
+      <app>
+        <div ng-controller="TaskController">
+          <div tags-selector="data.selectedTags"></div>
+          <div class="tags-selector-model big">
+            <pre class="json">{{data.tasks | json}}</pre>
+          </div>
+        </div>
+      </app>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <pre><code class="language-markup">  &lt;div ng-controller="TaskController"&gt;
+    &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;
+    &lt;div class="result"&gt;{{data.tasks | json}}&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      <pre><code class="language-javascript">  .controller('TaskController', function($scope, TaskResource) {
+    $scope.data = {
+      selectedTags: [],
+      tasks: []
+    };
+  });</code></pre>
+      <pre class="invisible"><code class="language-javascript">
+
+
+
+
+
+
+      </code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">  &lt;div ng-controller="TaskController"&gt;
+    &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;
+    &lt;div class="result"&gt;{{data.tasks | json}}&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      <pre data-line="13-15"><code class="language-javascript">  .controller('TaskController', function($scope, TaskResource) {
+    $scope.data = {
+      selectedTags: [],
+      tasks: []
+    };
+
+
+
+
+
+
+
+    $scope.$watch('data.selectedRoles', function(newSelectedRole) {
+      fetchUsers();
+    }, true);
+  });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">  &lt;div ng-controller="TaskController"&gt;
+    &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;
+    &lt;div class="result"&gt;{{data.tasks | json}}&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      <pre data-line="13"><code class="language-javascript">  .controller('TaskController', function($scope, TaskResource) {
+    $scope.data = {
+      selectedTags: [],
+      tasks: []
+    };
+
+
+
+
+
+
+
+    $scope.$watch('data.selectedRoles', fetchUsers, true);
+  });</code></pre>
+      <pre class="invisible"><code class="language-javascript"></code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content nofade">
+      <pre><code class="language-markup">  &lt;div ng-controller="TaskController"&gt;
+    &lt;div tags-selector="data.selectedTags"&gt;&lt;/div&gt;
+    &lt;div class="result"&gt;{{data.tasks | json}}&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      <pre data-line="7-13"><code class="language-javascript">  .controller('TaskController', function($scope, TaskResource) {
+    $scope.data = {
+      selectedTags: [],
+      tasks: []
+    };
+
+    var fetchTasks = function() {
+      var params = {};
+      if ($scope.data.selectedTags) {
+        params.tag = $scope.data.selectedTags;
+      }
+      $scope.data.tasks = TaskResource.query(params);
+    };
+
+    $scope.$watch('data.selectedRoles', fetchUsers, true);
+  });</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <span class="file">myapp/main.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp', ['ngResource']);</code></pre>
+      <span class="file">myapp/services.js</span>
+      <pre><code class="language-javascript">  angular.module('myapp',).factory('TaskResource', function($resource) {
+    return $resource('api/tasks.php');
+  })</code></pre>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Summary of this section</h2>
+        <img class="pull-left bullet" src="img/racatp-directive-basic.jpg">
+        <img class="pull-left bullet" src="img/recap-directive-definition.jpg">
+        <img class="pull-left bullet" src="img/recap-directive-pass.jpg">
+        <img class="pull-left bullet" src="img/recap-directive-methods.jpg">
+        <img class="pull-left bullet" src="img/recap-directive-rich.jpg">
+        <img class="pull-left bullet" src="img/recap-api.jpg">
+        <img class="pull-left bullet" src="img/recap-service.jpg">
+        <img class="pull-left bullet" src="img/recap-restapp.jpg">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <div class="byline">
+        <div class="classy">End of this session</div>
+      </div>
+      <h3 class="invisible">One more thing</h3>
+    </div>
+  </section>
+
+  <section data-slidetype="ngapp" data-ngapp-name="finish">
+    <div class="content">
+      <pre><code class="language-markup">
+    &lt;div ng-init="myList = []"&gt;
+      &lt;input type="text" placeholder="Name" ng-model="name"&gt;
+      &lt;button ng-click="myList.push({ name: name })"&gt;Add&lt;/button&gt;
+      &lt;ul&gt;
+        &lt;li ng-repeat="m in myList"&gt;{{m.name}}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+      </code></pre>
+      <app>
+        <div ng-init="myList = []">
+          <input type="text" placeholder="Name" ng-model="name">
+          <button ng-click="myList.push({ name: name })">Add</button>
+          <ul>
+            <li ng-repeat="m in myList">{{m.name}}</li>
+          </ul>
+        </div>
+      </app>
+    </div>
+  </section>
+</article>
+
+
+<script src="js/bespoke-0.2.min.js"></script>
+<script src="js/bespoke-bullets-0.2.min.js"></script>
+<script src="js/prism.min.js"></script>
+
+<script src="js/lodash.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+
+<script src="app/helloWorld.js"></script>
+<script src="app/controller1.js"></script>
+<script src="app/controller2.js"></script>
+<script src="app/controllerMethods.js"></script>
+<script src="app/controllerNgChange.js"></script>
+<script src="app/controllerNgWatch.js"></script>
+<script src="app/controllerNested.js"></script>
+<script src="app/controllerNestedFixed.js"></script>
+<script src="app/directive1.js"></script>
+<script src="app/directive2.js"></script>
+<script src="app/directive3.js"></script>
+<script src="app/directive4IsolatedPassing.js"></script>
+<script src="app/directiveTags.js"></script>
+<script src="app/service1.js"></script>
+<script src="app/finish.js"></script>
+
+
+<script>
+  bespoke.horizontal.from('article', {
+    bullets: '.bullet',
+    hash: true,
+    state: true,
+  });
+
+
+  bespoke.on('activate', function(ev) {
+    if (ev.slide.dataset.slidetype === 'video') {
+      angular.element(ev.slide).find('video')[0].play()
+    }
+
+    if (ev.slide.dataset.slidetype === 'ngapp') {
+      console.clear();
+      angular.bootstrap(angular.element(ev.slide).find('app'), [ev.slide.dataset.ngappName]);
+    }
+  });
+
+  bespoke.on('deactivate', function(ev) {
+    if (ev.slide.dataset.slidetype === 'video') {
+      angular.element(ev.slide).find('video')[0].pause()
+    }
+  });
+</script>
+
+</body>
+</html>
