@@ -16,7 +16,13 @@
       <div class="col-sm-6">
         <ul>
           <li ng-repeat="task in data.tasks">
-            {{task.text}}
+            <strong>{{task.text}}</strong>
+
+            <span   ng-repeat="tag in task.tags"
+                    class="">{{tag}}{{($last) ? '' : ', '}}</span>
+
+
+
             <input ng-model="task.done" type="checkbox">
           </li>
         </ul>
