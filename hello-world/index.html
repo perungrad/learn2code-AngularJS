@@ -12,9 +12,11 @@
 </head>
 <body>
   <div class="container">
-    <div ng-controller="UserController">
+    <div ng-controller="UserController as ctrl">
       <input ng-model="username" class="form-control" autofocus>
       <h2>Hello {{username}}</h2>
+      <button ng-click="ctrl.setUsername()">set username</button>
+      <button ng-click="ctrl.setUsername('Marienka')">set username</button>
     </div>
   </div>
 
