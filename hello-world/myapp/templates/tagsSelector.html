@@ -1,0 +1,10 @@
+<div class="tags-selector well">
+  <a  ng-click="selectTag(null)"
+      ng-class="{active:!model.length}"
+      class="alert alert-success">all</a>
+
+  <a  ng-repeat="tag in tags"
+      ng-click="selectTag(tag)"
+      ng-class="{active:isTagSelected(tag)}"
+      class="alert alert-success">{{tag}}</a>
+</div>

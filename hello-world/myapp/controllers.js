@@ -4,9 +4,11 @@ angular.module('myapp')
   'use strict';
 
   $scope.data = {
+    selectedTags: [],
     tasks: [
       {"text":"Buy beer","done":false,"tags":["home","urgent"]},
-      {"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Call Jim","done":true,"tags":["work"]},{"text":"Recharge credit card","done":true,"tags":["wife","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]}]
+      {"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Call Jim","done":true,"tags":["work"]},{"text":"Recharge credit card","done":true,"tags":["wife","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]}
+    ]
   };
 
   this.saveNewTask = function() {

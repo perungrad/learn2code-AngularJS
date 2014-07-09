@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <style>
     body { padding-top:4em; }
+    .tags-selector {}
+    .tags-selector .alert {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0.5em;
+    }
+    .tags-selector .alert:hover {
+      text-decoration: none;
+    }
+    .tags-selector .alert.active {
+      background-color: skyblue;
+    }
   </style>
 </head>
 <body>
@@ -29,7 +41,8 @@
       </div>
 
       <div class="col-sm-6">
-        {{ctrl.getDoneCount()}}
+        <h3>{{ctrl.getDoneCount()}}</h3>
+        <div tags-selector="data.selectedTags"></div>
       </div>
 
       <form ng-submit="ctrl.saveNewTask()" class="well">
@@ -43,5 +56,6 @@
   <script src="//code.angularjs.org/1.3.0-beta.14/angular.js"></script>
   <script src="myapp/main.js"></script>
   <script src="myapp/controllers.js"></script>
+  <script src="myapp/directives.js"></script>
 </body>
 </html>
