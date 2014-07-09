@@ -43,7 +43,7 @@
             <input ng-model="data.filterByDone" type="checkbox"> Only done
           </label>
         </div>
-        <div tags-selector="data.selectedTags" taglist="data.availableTags"></div>
+        <div tags-selector></div>
       </div>
 
       <form ng-submit="ctrl.saveNewTask()" class="well">
@@ -65,5 +65,6 @@
   <script src="myapp/main.js"></script>
   <script src="myapp/controllers.js"></script>
   <script src="myapp/directives.js"></script>
+  <script src="myapp/services.js"></script>
 </body>
 </html>

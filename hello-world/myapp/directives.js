@@ -1,17 +1,17 @@
 angular.module('myapp')
 
-.directive('tagsSelector', function() {
+.directive('tagsSelector', function(TagsService) {
   'use strict';
 
   return {
     restrict: 'EA',
     templateUrl: 'myapp/templates/tagsSelector.html',
     scope: {
-      model: '=tagsSelector',
-      taglist: '='
     },
+
     link: function(scope, el, attrs) {
-      scope.tags = scope.taglist;
+      scope.tags = TagsService.availableTags;
+      scope.model = TagsService.selectedTags;
 
       scope.isTagSelected = function(tag) {
         return _.include(scope.model, tag);
@@ -27,7 +27,7 @@ angular.module('myapp')
             scope.model.splice(idx, 1);
           }
         } else {
-          scope.model = [];
+          scope.model.splice(0, scope.model.length);
         }
       };
     }

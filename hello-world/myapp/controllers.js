@@ -1,12 +1,12 @@
 angular.module('myapp')
 
-.controller('TaskController', function($scope) {
+.controller('TaskController', function($scope, TagsService) {
   'use strict';
 
   $scope.data = {
     filterByDone: false,
-    availableTags: ['home', 'work', 'wife', 'urgent'],
-    selectedTags: [],
+    availableTags: TagsService.availableTags,
+    selectedTags: TagsService.selectedTags,
     tasks: [
       {"text":"Buy beer","done":false,"tags":["home","urgent"]},
       {"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Send spreadsheet","done":true,"tags":["work","urgent"]},{"text":"Call Jim","done":true,"tags":["work"]},{"text":"Recharge credit card","done":true,"tags":["wife","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]},{"text":"Print monthly report","done":true,"tags":["work","urgent"]}
