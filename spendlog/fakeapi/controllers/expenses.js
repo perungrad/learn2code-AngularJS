@@ -2,10 +2,10 @@ var _ = require('lodash');
 var moment = require('moment');
 var expenses = require(__dirname + '/../../fixtures/expenses.json');
 
-// expenses = _.map(expenses, function(expense) {
-//   delete(expense.id);
-//   return expense;
-// });
+expenses = _.map(expenses, function(expense) {
+  delete(expense.id);
+  return expense;
+});
 
 
 var index = function(req, res) {
