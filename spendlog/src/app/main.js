@@ -1,6 +1,8 @@
 angular.module('sl', [
   'ngResource',
-  'ngRoute'
+  'ngRoute',
+
+  'sl.templates'
 ])
 
 .config(function() {
