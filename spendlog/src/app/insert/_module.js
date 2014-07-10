@@ -6,7 +6,7 @@ angular.module('sl.insert', [])
 
   $routeProvider
     .when('/', {
-      controller: 'Insert.IndexController',
+      controller: 'Insert.IndexController as ctrl',
       templateUrl: 'app/insert/views/index.html'
     });
 });

@@ -1,6 +1,8 @@
 angular.module('sl', [
+  'ngAnimate',
   'ngResource',
   'ngRoute',
+  'mgcrea.ngStrap',
 
   'sl.templates',
   'sl.insert'

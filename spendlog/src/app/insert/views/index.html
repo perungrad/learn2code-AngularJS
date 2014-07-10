@@ -1,7 +1,9 @@
 <h1>Insert.index</h1>
 
 <div class="row">
-  <button class="btn btn-lg btn-block btn-primary">{{data.volumeTotal.toFixed(2)}}</button>
+  <button   ng-click="ctrl.confirmPayment()"
+            ng-disabled="!data.volumeTotal"
+            class="btn btn-lg btn-block btn-primary">{{data.volumeTotal.toFixed(2)}}</button>
 </div>
 
 
