@@ -282,7 +282,7 @@ gulp.task('build', function() {
   return runSequence(
     'clean',
     'jshint',
-    ['buildImages', 'buildStyles', 'favicon', 'fonts', 'jsMaps', 'templates'],
+    ['buildImages', 'favicon', 'jsMaps', 'fonts', 'templates'],
     'buildIndex',
     'cleanBuild'
   );
