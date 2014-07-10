@@ -18,6 +18,14 @@ angular.module('sl.shared')
   this.storeExpense = function(volume) {
     var request = ExpensesResource.storeExpense({volume:volume});
 
+    request.$promise.then(function(expense) {
+      if (this._queryCache.getList) {
+        this.getList().then(function(list) {
+          list.data.expenses.unshift(expense);
+          list.data.total += expense.volume;
+        });
+      }
+    }.bind(this));
 
     return request.$promise;
   };

@@ -7,6 +7,7 @@ angular.module('sl', [
 
   'sl.shared',
   'sl.templates',
+  'sl.expenses',
   'sl.insert'
 ])
 

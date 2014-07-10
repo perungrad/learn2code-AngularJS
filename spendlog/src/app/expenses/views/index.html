@@ -1,0 +1,18 @@
+<h1>Expenses.index</h1>
+
+<div class="page-portlet-header row" ng-show="data.expenses">
+  <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
+    <h2 class="text-right">Total {{data.total.toFixed(2)}}</h2>
+  </div>
+</div>
+
+<div class="expenses-list page-portlet-data row" ng-show="data.expenses">
+  <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
+    <div class="list-group">
+      <a ng-repeat="expense in data.expenses" class="list-group-item am-fade-and-scale">
+        <span class="badge">{{expense.volume.toFixed(2)}}</span>
+        {{expense.created | timeago}}
+      </a>
+    </div>
+  </div>
+</div>
