@@ -128,7 +128,7 @@ gulp.task('watch', function() {
   gulp.watch(src.appFiles, ['index', 'jshint']);
   gulp.watch(src.appTemplates, ['templates']);
   gulp.watch(src.index, ['index']);
-  gulp.watch(src.stylesFiles, ['styles']);
+  // gulp.watch(src.stylesFiles, ['styles']);
 });
 
 gulp.task('serve', function() {
@@ -291,7 +291,7 @@ gulp.task('build', function() {
 gulp.task('default', function() {
   return runSequence(
     'clean',
-    ['fonts', 'index', 'jshint', 'templates', 'styles', 'serve', 'watch'],
+    ['index', 'jshint', 'templates', 'serve', 'watch'],
     'livereload'
   );
 });
