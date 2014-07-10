@@ -1,17 +1,21 @@
 <h1>Insert.index</h1>
 
 <div class="row">
-  <button   ng-click="ctrl.confirmPayment()"
-            ng-disabled="!data.volumeTotal"
-            class="btn btn-lg btn-block btn-primary">{{data.volumeTotal.toFixed(2)}}</button>
+  <div class="col-sm-12">
+    <button   ng-click="ctrl.confirmPayment()"
+              ng-disabled="!data.volumeTotal"
+              class="btn btn-lg btn-block btn-primary">{{data.volumeTotal.toFixed(2)}}</button>
+  </div>
 </div>
 
 
 
 <div class="row">
-  <div class="insert-facet">
-    <input ng-model="data.volumeX10" type="range" min="0" max="9" step="1">
-    <input ng-model="data.volumeX1"  type="range" min="0" max="9" step="1">
-    <input ng-model="data.volumeX01" type="range" min="0" max="9" step="1">
+  <div class="col-sm-12">
+    <div class="insert-facet">
+      <input ng-model="data.volumeX10" type="range" min="0" max="9" step="1">
+      <input ng-model="data.volumeX1"  type="range" min="0" max="9" step="1">
+      <input ng-model="data.volumeX01" type="range" min="0" max="9" step="1">
+    </div>
   </div>
 </div>
