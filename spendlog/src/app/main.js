@@ -4,6 +4,7 @@ angular.module('sl', [
   'ngRoute',
   'mgcrea.ngStrap',
 
+  'sl.shared',
   'sl.templates',
   'sl.insert'
 ])
