@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="sl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spend log</title>
+
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+  <div class="container">
+    <div ng-view></div>
+  </div>
+
+  <!-- build:js app/vendor.js -->
+  <script src="vendor/lodash/dist/lodash.js"></script>
+  <script src="vendor/angular/angular.js"></script>
+  <script src="vendor/angular-resource/angular-resource.js"></script>
+  <script src="vendor/angular-route/angular-route.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js app/app.js -->
+  <!-- include:js(app/**/*.js) -->
+  <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        ".sass-cache",
+        "dist",
+        "fakeapi",
+        "fixtures",
+        "specs",
+        "src"
+      ],
+      "file_exclude_patterns": [
+        "*.sublime-workspace"
+      ]
+    },
+
+    {
+      "path": "fixtures"
+    },
+
+    {
+      "path": "fakeapi"
+    },
+
+    {
+      "path": "dist"
+    },
+
+    {
+      "path": "src",
+      "folder_exclude_patterns": [
+      ],
+      "file_exclude_patterns": [
+      ]
+    },
+
+    {
+      "path": "specs"
+    }
+  ]
+}
