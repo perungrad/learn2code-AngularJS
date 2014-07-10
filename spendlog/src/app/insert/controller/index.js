@@ -4,7 +4,7 @@ angular.module('sl.insert')
   'use strict';
 
   $scope.data = {
-    volumeTotal: 14.7,
+    volumeTotal: 0,
     volumeX10: undefined,
     volumeX1: undefined,
     volumeX01: undefined,
