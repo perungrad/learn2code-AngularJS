@@ -1,6 +1,7 @@
 angular.module('sl.shared')
 
 .directive('navbar', function($route) {
+  'use strict';
 
   return {
     restrict: 'EA',
@@ -13,7 +14,7 @@ angular.module('sl.shared')
         var section = current.$$route.controller.match(/^(\w+)\./)[1];
 
         scope.isExpensesSection = (section === 'Expenses');
-      })
+      });
     }
-  }
+  };
 });

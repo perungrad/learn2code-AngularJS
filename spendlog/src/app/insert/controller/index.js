@@ -23,7 +23,7 @@ angular.module('sl.insert')
     ExpensesRepository.storeExpense($scope.data.volumeTotal).then(function(res) {
       growl.success('Expense saved successfuly');
       $scope.data.volumeTotal = 0;
-    })
+    });
   };
 
 
