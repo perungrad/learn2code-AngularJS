@@ -20,16 +20,17 @@ angular.module('sl.insert')
   };
 
   this.storeExpense = function() {
-    console.log($scope.data.volumeTotal)
     $scope.data.volumeTotal = 0;
   };
 
 
   $scope.$watchGroup(['data.volumeX10', 'data.volumeX1', 'data.volumeX01'], function() {
-    if (      $scope.data.volumeX10 !== undefined
-          &&  $scope.data.volumeX1 !== undefined
-          &&  $scope.data.volumeX01 !== undefined) {
-      $scope.data.volumeTotal = ($scope.data.volumeX10 * 10) + ($scope.data.volumeX1 * 1) + ($scope.data.volumeX01 * 0.1);
+    if ($scope.data.volumeX10 !== undefined &&
+        $scope.data.volumeX1 !== undefined &&
+        $scope.data.volumeX01 !== undefined) {
+      $scope.data.volumeTotal = ($scope.data.volumeX10 * 10) +
+        ($scope.data.volumeX1 * 1) +
+        ($scope.data.volumeX01 * 0.1);
     }
   });
 
@@ -37,5 +38,5 @@ angular.module('sl.insert')
     $scope.data.volumeX10 = parseInt(($scope.data.volumeTotal % 100) / 10);
     $scope.data.volumeX1  = parseInt(($scope.data.volumeTotal % 10)  / 1);
     $scope.data.volumeX01 = parseInt(($scope.data.volumeTotal * 10 % 10));
-  })
+  });
 });
