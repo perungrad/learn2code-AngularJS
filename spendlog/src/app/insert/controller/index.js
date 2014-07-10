@@ -1,6 +1,6 @@
 angular.module('sl.insert')
 
-.controller('Insert.IndexController', function($scope, $modal) {
+.controller('Insert.IndexController', function($scope, $modal, ExpensesRepository, growl) {
   'use strict';
 
   $scope.data = {
@@ -20,7 +20,10 @@ angular.module('sl.insert')
   };
 
   this.storeExpense = function() {
-    $scope.data.volumeTotal = 0;
+    ExpensesRepository.storeExpense($scope.data.volumeTotal).then(function(res) {
+      growl.success('Expense saved successfuly');
+      $scope.data.volumeTotal = 0;
+    })
   };
 
 

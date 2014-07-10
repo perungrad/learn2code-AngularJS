@@ -9,6 +9,7 @@
   <!-- build:css styles/vendor.css -->
   <link rel="stylesheet" href="styles/bootstrap.css">
   <link rel="stylesheet" href="vendor/angular-motion/dist/angular-motion.css">
+  <link rel="stylesheet" href="vendor/angular-growl-v2/build/angular-growl.css">
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
@@ -17,6 +18,7 @@
 </head>
 <body>
 
+  <div growl></div>
   <div navbar></div>
   <div class="container">
     <div ng-view></div>
@@ -30,6 +32,7 @@
   <script src="vendor/angular-route/angular-route.js"></script>
   <script src="vendor/angular-strap/dist/angular-strap.js"></script>
   <script src="vendor/angular-strap/dist/angular-strap.tpl.js"></script>
+  <script src="vendor/angular-growl-v2/build/angular-growl.js"></script>
   <!-- endbuild -->
 
   <!-- build:js app/app.js -->
