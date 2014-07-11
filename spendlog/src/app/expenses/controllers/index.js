@@ -1,6 +1,6 @@
 angular.module('sl.expenses')
 
-.controller('Expenses.IndexController', function($scope, ExpensesRepository) {
+.controller('Expenses.IndexController', function($scope, ExpensesRepository, growl) {
   'use strict';
 
   this.loadMore = function() {
@@ -9,7 +9,9 @@ angular.module('sl.expenses')
 
   this.deleteExpense = function(expense, $event) {
     $event.preventDefault();
-    ExpensesRepository.deleteExpense(expense);
+    ExpensesRepository.deleteExpense(expense).then(null, function() {
+      growl.error('Server error');
+    });
   };
 
   ExpensesRepository.getList().then(function(list) {

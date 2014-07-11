@@ -57,11 +57,16 @@ angular.module('sl.shared')
 
   this.deleteExpense = function(expense) {
     var promise = expense.delete();
+    var idx;
 
-    promise.then(function() {
+    this.getList().then(function(list) {
+      idx = list.data.expenses.indexOf(expense);
+      list.data.expenses.splice(idx, 1);
+    });
+
+    promise.then(null, function() {
       this.getList().then(function(list) {
-        var idx = list.data.expenses.indexOf(expense);
-        list.data.expenses.splice(idx, 1);
+        list.data.expenses.splice(idx, 0, expense);
       });
     }.bind(this));
 
