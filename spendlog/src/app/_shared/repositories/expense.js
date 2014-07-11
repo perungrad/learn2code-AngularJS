@@ -40,6 +40,32 @@ angular.module('sl.shared')
     return dfd.promise;
   };
 
+  this.findByUuid = function(uuid) {
+    if (this._queryCache.getList) {
+      var dfd = $q.defer();
+
+      this.getList().then(function(list) {
+        var expense = _.find(list.data.expenses, function(expense) {
+          return expense.uuid === uuid;
+        });
+
+        if (expense) {
+          dfd.resolve({data: {expense:expense}});
+        } else {
+          var request = ExpensesResource.get({uuid: uuid});
+          dfd.resolve(request.$promise);
+        }
+      });
+
+      return dfd.promise;
+
+    } else {
+      var request = ExpensesResource.get({uuid: uuid});
+
+      return request.$promise;
+    }
+  }
+
   this.storeExpense = function(volume) {
     var request = ExpensesResource.storeExpense({volume:volume});
 

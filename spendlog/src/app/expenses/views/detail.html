@@ -1,0 +1,15 @@
+<div class="page-portlet-loader" ng-show="!data.expense"></div>
+
+<div class="page-portlet-header row" ng-show="data.expense">
+  <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
+    <h2 class="text-right">{{data.expense.created}}</h2>
+  </div>
+</div>
+
+<div class="page-portlet-data row" ng-show="data.expense">
+  <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
+    <div class="well">
+      <span class="badge">{{data.expense.volume.toFixed(2)}}</span>
+    </div>
+  </div>
+</div>
