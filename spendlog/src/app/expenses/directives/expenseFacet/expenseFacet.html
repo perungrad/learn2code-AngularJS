@@ -1,0 +1,8 @@
+<span ng-click="ctrl.deleteExpense(expense, $event)" title="delete" class="label label-danger pull-right">
+  <i class="glyphicon glyphicon-remove"></i>
+</span>
+<span ng-click="ctrl.updateExpense(expense, $event)" title="update expense" class="label label-primary pull-right">
+  <i class="glyphicon glyphicon-pencil"></i>
+</span>
+<span class="badge">{{expense.volume.toFixed(2)}}</span>
+{{expense.created | timeago}}

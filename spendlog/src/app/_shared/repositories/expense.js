@@ -55,6 +55,12 @@ angular.module('sl.shared')
     return request.$promise;
   };
 
+  this.updateExpense = function(expense) {
+    var promise = expense.update();
+
+    return promise;
+  };
+
   this.deleteExpense = function(expense) {
     var promise = expense.delete();
     var idx;

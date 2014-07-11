@@ -9,8 +9,15 @@ angular.module('sl.shared')
   }, {
     storeExpense: {
       method: 'POST'
+    },
+    update: {
+      method: 'PUT'
     }
   });
+
+  resource.prototype.update = function() {
+    return this.$update({uuid: this.uuid});
+  };
 
   resource.prototype.delete = function() {
     return this.$delete({uuid: this.uuid});
