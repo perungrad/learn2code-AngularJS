@@ -172,6 +172,9 @@ gulp.task('unit', function() {
 
 
 gulp.task('protractor', function() {
+  // before running this task please install Selenium by this command
+  // ./node_modules/gulp-protractor/node_modules/protractor/bin/webdriver-manager update
+
   return gulp.src('foobar')   // intentional nonsense, files are configured in configFile
     .pipe(protractor({
       configFile: 'protractor.conf.js'

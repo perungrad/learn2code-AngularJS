@@ -4,7 +4,7 @@ angular.module('sl.insert')
   'use strict';
 
   $scope.data = {
-    volumeTotal: 23.4
+    volumeTotal: 0
   };
 
   this.confirmPayment = function() {
