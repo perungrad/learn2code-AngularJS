@@ -3,8 +3,8 @@ angular.module('sl.shared')
 .factory('ExpensesResource', function($resource, apiUrl) {
   'use strict';
 
-  var res = $resource(apiUrl + '/expenses/:id', {
-    id: '@id'
+  var resource = $resource(apiUrl + '/expenses/:uuid', {
+    uuid: '@uuid'
 
   }, {
     storeExpense: {
@@ -13,5 +13,5 @@ angular.module('sl.shared')
   });
 
 
-  return res;
+  return resource;
 });
