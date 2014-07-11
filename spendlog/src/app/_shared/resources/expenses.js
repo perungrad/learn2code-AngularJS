@@ -12,6 +12,9 @@ angular.module('sl.shared')
     }
   });
 
+  resource.prototype.delete = function() {
+    return this.$delete({uuid: this.uuid});
+  };
 
   return resource;
 });

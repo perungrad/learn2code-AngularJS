@@ -9,7 +9,12 @@
 <div class="expenses-list page-portlet-data row" ng-show="data.expenses">
   <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
     <div class="list-group">
-      <a ng-repeat="expense in data.expenses" class="list-group-item am-fade-and-scale">
+      <a  ng-repeat="expense in data.expenses"
+          ng-href="#/expenses/{{expense.uuid}}"
+          class="list-group-item am-fade-and-scale">
+        <span ng-click="ctrl.deleteExpense(expense, $event)" title="delete" class="label label-danger pull-right">
+          <i class="glyphicon glyphicon-remove"></i>
+        </span>
         <span class="badge">{{expense.volume.toFixed(2)}}</span>
         {{expense.created | timeago}}
       </a>

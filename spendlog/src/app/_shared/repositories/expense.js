@@ -54,4 +54,17 @@ angular.module('sl.shared')
 
     return request.$promise;
   };
+
+  this.deleteExpense = function(expense) {
+    var promise = expense.delete();
+
+    promise.then(function() {
+      this.getList().then(function(list) {
+        var idx = list.data.expenses.indexOf(expense);
+        list.data.expenses.splice(idx, 1);
+      });
+    }.bind(this));
+
+    return promise;
+  };
 });
