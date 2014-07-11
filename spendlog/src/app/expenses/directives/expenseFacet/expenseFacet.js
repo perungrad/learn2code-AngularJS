@@ -9,6 +9,7 @@ angular.module('sl.expenses')
     scope: {
       expense: '=expenseFacet',
       updateExpense: '&expenseFacetUpdate',
+      deleteExpense: '&expenseFacetDelete',
     },
 
     controller: function($scope, $compile, $element) {
@@ -32,6 +33,11 @@ angular.module('sl.expenses')
             $scope.updateExpense({expense:expense});
           }
         }
+      };
+
+      this.deleteExpense = function(expense, $event) {
+        $event.preventDefault();
+        $scope.deleteExpense({expense: expense});
       };
     },
     controllerAs: 'ctrl',

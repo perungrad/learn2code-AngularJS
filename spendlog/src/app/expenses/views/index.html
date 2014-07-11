@@ -11,6 +11,7 @@
     <div class="list-group">
       <a  expense-facet="expense"
           expense-facet-update="ctrl.updateExpense(expense)"
+          expense-facet-delete="ctrl.deleteExpense(expense)"
           ng-repeat="expense in data.expenses"
           ng-href="#/expenses/{{expense.uuid}}"
           class="list-group-item am-fade-and-scale"></a>

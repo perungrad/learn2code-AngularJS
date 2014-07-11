@@ -13,8 +13,7 @@ angular.module('sl.expenses')
     });
   };
 
-  this.deleteExpense = function(expense, $event) {
-    $event.preventDefault();
+  this.deleteExpense = function(expense) {
     ExpensesRepository.deleteExpense(expense).then(null, function() {
       growl.error('Server error');
     });
