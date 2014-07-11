@@ -4,7 +4,8 @@ angular.module('sl.insert')
   'use strict';
 
   $scope.data = {
-    volumeTotal: 0
+    volumeTotal: 0,
+    foo: 'lololol\ndfsdfasfasf\nafsadfasdfsaf\n'
   };
 
   this.confirmPayment = function() {
@@ -21,5 +22,10 @@ angular.module('sl.insert')
       growl.success('Expense saved successfuly');
       $scope.data.volumeTotal = 0;
     });
+  };
+
+  this.send = function() {
+    // TODO
+    $scope.data.foo = '';
   };
 });
