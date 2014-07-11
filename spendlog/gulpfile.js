@@ -229,13 +229,13 @@ gulp.task('buildIndex', function() {
 
 gulp.task('buildStyles', function() {
   return gulp.src(src.stylesFiles)
-    .pipe(compass({
-      css: dist.styles,
-      sass: src.styles,
-      style: 'compressed',
-      comments: false,
-    }))
-    .pipe(autoprefixer())
+    // .pipe(compass({
+    //   css: dist.styles,
+    //   sass: src.styles,
+    //   style: 'compressed',
+    //   comments: false,
+    // }))
+    // .pipe(autoprefixer())
     .pipe(gulp.dest(dist.styles));
 });
 
@@ -247,6 +247,7 @@ gulp.task('favicon', function() {
 gulp.task('jsMaps', function() {
   return gulp.src([
       src.vendor + '/angular/angular.min.js.map',
+      src.vendor + '/angular-animate/angular-animate.min.js.map',
       src.vendor + '/angular-resource/angular-resource.min.js.map',
       src.vendor + '/angular-route/angular-route.min.js.map',
     ])
@@ -285,7 +286,7 @@ gulp.task('build', function() {
   return runSequence(
     'clean',
     'jshint',
-    ['buildImages', 'favicon', 'jsMaps', 'fonts', 'templates'],
+    ['buildImages', 'buildStyles', 'favicon', 'jsMaps', 'fonts', 'templates'],
     'buildIndex',
     'cleanBuild'
   );
