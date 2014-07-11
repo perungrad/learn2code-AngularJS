@@ -64,7 +64,7 @@ angular.module('sl.shared')
 
       return request.$promise;
     }
-  }
+  };
 
   this.storeExpense = function(volume) {
     var request = ExpensesResource.storeExpense({volume:volume});
