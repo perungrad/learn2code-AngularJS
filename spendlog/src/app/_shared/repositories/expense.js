@@ -9,6 +9,11 @@ angular.module('sl.shared')
   this.getList = function() {
     if (!this._queryCache.getList) {
       this._queryCache.getList = ExpensesResource.get().$promise;
+      this._queryCache.getList.then(function(list) {
+        list.data.expenses = _.map(list.data.expenses, function(expense) {
+          return new ExpensesResource(expense);
+        });
+      });
     }
 
     return this._queryCache.getList;
@@ -21,9 +26,11 @@ angular.module('sl.shared')
     listPromise.then(function(list) {
       var countListItems = list.data.expenses.length;
       var loadMorePromise = ExpensesResource.get({from: countListItems + 1}).$promise;
-      listPromise = loadMorePromise;
 
       loadMorePromise.then(function(moreList) {
+        moreList.data.expenses = _.map(moreList.data.expenses, function(expense) {
+          return new ExpensesResource(expense);
+        });
         list.data.expenses.push.apply(list.data.expenses, moreList.data.expenses);
         list.meta.hasMore = moreList.meta.hasMore;
         dfd.resolve(moreList);
